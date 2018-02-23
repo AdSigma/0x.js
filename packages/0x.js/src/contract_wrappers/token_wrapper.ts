@@ -373,11 +373,11 @@ export class TokenWrapper extends ContractWrapper {
         if (!_.isUndefined(tokenContract)) {
             return tokenContract;
         }
-        const web3ContractInstance = await this._instantiateContractIfExistsAsync(
+        const [abi, address] = await this._getContractAbiAndAddressFromArtifactsAsync(
             artifacts.TokenArtifact,
             tokenAddress,
         );
-        const contractInstance = new TokenContract(web3ContractInstance, this._web3Wrapper.getContractDefaults());
+        const contractInstance = new TokenContract(this._web3Wrapper, abi, address);
         tokenContract = contractInstance;
         this._tokenContractsByAddress[tokenAddress] = tokenContract;
         return tokenContract;
