@@ -2,9 +2,9 @@
 
 ## v0.2.0 _TBD, 2018_
 
-    * Add `web3Wrapper.callAsync` (#TBD)
-    * Make `web3Wrapper.estimateGas` accept whole `txData` instead of `data` (#TBD)
-    * Remove `web3Wrapper.getContractInstance` (#TBD)
+    * Add `web3Wrapper.callAsync` (#413)
+    * Make `web3Wrapper.estimateGas` accept whole `txData` instead of `data` (#413)
+    * Remove `web3Wrapper.getContractInstance` (#413)
 
 ## v0.1.12 _February 9, 2018_
 
